@@ -1,0 +1,7 @@
+{
+    "editor.wordWrap": "on",
+    "workbench.preferredDarkColorTheme": "Tonic (rainglow)",
+    "workbench.colorTheme": "Joker (rainglow)",
+    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.preferredHighContrastColorTheme": "Default Dark+"
+}
