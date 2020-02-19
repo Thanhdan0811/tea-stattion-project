@@ -32,7 +32,29 @@ a {
     color: var(--primaryColor);
 }
 /* clearfix */
+.clearfix::after, .clearfix::before {
+    content: '';
+    clear: both;
+    display: table;
+}
 /* globals */
+.section-center {
+    padding: 4rem 0;
+    width: 80vw;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.section-subtitle{
+    font-size: 2rem;
+    font-family: var(--slantedText);
+    letter-spacing: var(--letterSpacing);
+    text-transform: capitalize;
+    color: var(--primaryColor);
+}
+.section-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
 /* navbar */
 
 /* header */
@@ -129,3 +151,97 @@ a {
     }
 }
 /* end aniamtion */
+/* content divider */
+.content-divider {
+    height: 0.5rem;
+    background: linear-gradient(to left, var(--primaryColor), var(--secondaryColor),var(--primaryColor));
+}
+/* end content divider */
+/* skills */
+.skills {
+    background: var(--mainGrey);
+}
+.skill {
+    padding: 2.5rem 0;
+    text-align: center;
+    transition: var(--mainTransition);
+} 
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    transition: var(--mainTransition);
+    display: inline-block;
+}
+.skill-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: var(--letterSpacing);
+    margin-bottom: 1.5rem;
+    color: var(--primaryColor); 
+    transition: var(--mainTransition);
+}
+.skill-text {
+    max-width: 13rem;
+    margin: 0 auto;
+}
+.skill:hover {
+    background: var(--primaryColor);
+}
+.skill:hover .skill-title {
+    color: var(--mainWhite);
+}
+.skill:hover .skill-icon {
+    transform: translateY(-5px);
+}
+@media screen and (min-width: 576px) {
+    .skill {
+        float: left;
+        width: 50%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .skill {
+        width: 25%;
+    }
+}
+/* end skills */
+/* about section */
+
+/* .section-center {
+    padding: 4rem 0;
+    width: 80vw;
+    max-width: 1170px;
+    margin: 0 auto;
+} */
+.about-img, .about-info {
+    padding: 2rem 0;
+}
+.about-picture-container {
+    background: var(--primaryColor);
+    border: 0.5rem solid var(--primaryColor);
+    border-radius: 1rem;
+    /* overflow */
+    overflow: hidden;
+}
+.about-picture {
+    width: 100%;
+    display: block;
+    transition: var(--mainTransition);
+}
+.about-picture-container:hover .about-picture {
+    opacity: 0.5;
+    transform: scale(1.2);
+}
+.about-text {
+    margin: 1rem 0;
+    max-width: 26rem;
+}
+@media  screen and (min-width:992px) {
+    .about-img, .about-info {
+        float: left;
+        width: 50%;
+        padding: 2rem;
+    }
+}
+/* end about section */
